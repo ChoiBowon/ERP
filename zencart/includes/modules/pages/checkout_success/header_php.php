@@ -1,4 +1,46 @@
 <?php
+//Zencart to ERP AI
+    $conn = new mysqli('localhost', 'root', '', 'zencart'); // modifying needed!
+
+    if($conn -> connect_errno) {
+        die('Connect Error : '.$conn->connect_error);
+    }
+
+?>
+
+<?php
+
+    $query = "SELECT t1.orders_id, t2.customers_id, t2.customers_name, t2.customers_company, t2.customers_city, t2.customers_state, t2.customers_country, t2.date_purchased, t1.products_id, t1.products_price, t1.products_quantity
+        FROM orders_products AS t1, orders AS t2
+        WHERE t1.orders_id = t2.orders_id" or die("Error: ".mysql_error()."with query");
+    $result = $conn->query($query) or die("Select Error: $conn->error");
+
+?>
+
+<?php
+
+    if(file_exists('C:/Users/cleve/Desktop/ai.csv')) {
+        unlink('C:/Users/cleve/Desktop/ai.csv');
+    }
+
+    $newline = chr(10);
+
+    $fp = fopen("C:/Users/cleve/Desktop/ai.csv", "w") or die("C:/Users/cleve/Desktop/ai.csv 파일을 열 수 없습니다.");
+    fwrite($fp, "OrderID, CustomerID, CustomerName, CompanyName, City, State, Country, OrderDate, PartID, Price, Quantity");
+    fwrite($fp, $newline);
+
+    $row = mysqli_fetch_array($result);
+
+    while($row) {
+        fwrite($fp, $row[0].",".$row[1].",".$row[2].",".$row[3].",".$row[4].",".$row[5].",".$row[6].",".$row[7].",".$row[8].",".$row[9].",".$row[10]);
+        fwrite($fp, $newline);
+        $row = mysqli_fetch_array($result);
+    }
+    fclose($fp);
+
+?>
+
+<?php
 /**
  * checkout_success header_php.php
  *

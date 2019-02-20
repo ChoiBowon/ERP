@@ -61,7 +61,66 @@ while (!$addresses->EOF) {
                           'address'=>$addresses->fields);
   $addresses->MoveNext();
 }
-
 // This should be last line of the script:
 $zco_notifier->notify('NOTIFY_HEADER_END_CREATE_ACCOUNT_SUCCESS');
+
+
+$customers_id = $addresses->fields['address_book_id'];
+
+$customers_query = "
+  SELECT customers_email_address, customers_telephone FROM customers where customers_id = '".$customers_id."';
+  ";
+$customers = $db->Execute($customers_query);
+
+$crm_email = $customers->fields['customers_email_address'];
+$crm_tele = $customers->fields['customers_telephone'];
+
+$zen_country_id = $addresses->fields['country_id'];
+// $zen_country_id = 19;
+
+$country_query = "
+  SELECT countries_name FROM countries WHERE countries_id=".$zen_country_id.";
+  ";
+
+$zen_country = $db->Execute($country_query);
+$crm_country = $zen_country->fields['countries_name'];
+// // $crm_country = "korea";
+
+
+?>
+
+<?php
+
+
+
+$conn = mysqli_connect(
+  "localhost",                        // hostname
+  "root",                             // username
+  "",                             // password
+  "suitecrm");                               // database
+$crm_id = $addresses->fields['address_book_id'];
+$crm_name = $addresses->fields['firstname'];
+$crm_name .= $addresses->fields['lastname'];
+$time = date("Y-m-d H:i:s");
+//
+$crm_street = $addresses->fields['street_address'];
+$crm_city = $addresses->fields['city'];
+$crm_postcode = $addresses->fields['postcode'];
+$crm_state = $addresses->fields['state'];
+//
+$sql  = "
+  INSERT INTO accounts(id, name, date_entered, date_modified, billing_address_street, billing_address_city, billing_address_state, billing_address_postalcode, billing_address_country, phone_office, shipping_address_country)
+  VALUES('".$crm_id."','".$crm_name."','".$time."','".$time."','".$crm_street."','".$crm_city."','".$crm_state."','".$crm_postcode."','".$crm_country."','".$crm_tele."','".$crm_country."');
+";
+//
+// $sql  = "
+//   INSERT INTO accounts(id, name, date_entered, date_modified, billing_address_street, billing_address_city, billing_address_state, billing_address_postalcode, phone_office)
+//   VALUES('".$crm_id."','".$crm_name."','".$time."','".$time."','".$crm_street."','".$crm_city."','".$crm_state."','".$crm_postcode."','".$crm_tele."');
+// ";
+
+$result = mysqli_query($conn, $sql);
+if($result === false){
+    echo mysqli_error($conn);
+}
+ // echo  $crm_id.$crm_name;
 ?>

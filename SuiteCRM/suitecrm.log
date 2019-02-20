@@ -1,0 +1,203 @@
+Tue Feb 19 19:51:47 2019 [20040][-none-][FATAL] User update error: Temp User is not retrieved at ID 1, boolean given
+Tue Feb 19 19:51:47 2019 [20040][-none-][FATAL] Email address save error
+Tue Feb 19 19:54:34 2019 [20040][1][FATAL] [ERROR] Failed to index bean to index
+Tue Feb 19 19:54:34 2019 [20040][1][FATAL] [ERROR] SuiteCRM\Search\Exceptions\SearchException: Elasticsearch trying to re-indexing a bean but indexer is disabled in configuration. in C:\xampp\htdocs\SuiteCRM\lib\Search\ElasticSearch\ElasticSearchHooks.php:121
+Stack trace:
+#0 C:\xampp\htdocs\SuiteCRM\lib\Search\ElasticSearch\ElasticSearchHooks.php(103): SuiteCRM\Search\ElasticSearch\ElasticSearchHooks->reIndex(Object(AOD_Index))
+#1 C:\xampp\htdocs\SuiteCRM\lib\Search\ElasticSearch\ElasticSearchHooks.php(76): SuiteCRM\Search\ElasticSearch\ElasticSearchHooks->reIndexSafe(Object(AOD_Index))
+#2 C:\xampp\htdocs\SuiteCRM\include\utils\LogicHook.php(265): SuiteCRM\Search\ElasticSearch\ElasticSearchHooks->beanSaved(Object(AOD_Index), 'after_save', '')
+#3 C:\xampp\htdocs\SuiteCRM\include\utils\LogicHook.php(207): LogicHook->process_hooks(Array, 'after_save', '')
+#4 C:\xampp\htdocs\SuiteCRM\data\SugarBean.php(3133): LogicHook->call_custom_logic('AOD_Index', 'after_save', '')
+#5 C:\xampp\htdocs\SuiteCRM\data\SugarBean.php(2447): SugarBean->call_custom_logic('after_save', '')
+#6 C:\xampp\htdocs\SuiteCRM\modules\AOD_Index\AOD_Index.php(102): SugarBean->save()
+#7 C:\xampp\htdocs\SuiteCRM\modules\AOD_Index\AOD_LogicHooks.php(35): AOD_Index->getIndex()
+#8 C:\xampp\htdocs\SuiteCRM\include\utils\LogicHook.php(265): AOD_LogicHooks->saveModuleChanges(Object(UserPreference), 'after_save', '')
+#9 C:\xampp\htdocs\SuiteCRM\include\utils\LogicHook.php(207): LogicHook->process_hooks(Array, 'after_save', '')
+#10 C:\xampp\htdocs\SuiteCRM\data\SugarBean.php(3133): LogicHook->call_custom_logic('UserPreferences', 'after_save', '')
+#11 C:\xampp\htdocs\SuiteCRM\data\SugarBean.php(2447): SugarBean->call_custom_logic('after_save', '')
+#12 C:\xampp\htdocs\SuiteCRM\modules\UserPreferences\UserPreference.php(342): SugarBean->save()
+#13 C:\xampp\htdocs\SuiteCRM\modules\Users\User.php(435): UserPreference->savePreferencesToDB()
+#14 C:\xampp\htdocs\SuiteCRM\include\utils.php(3329): User->savePreferencesToDB()
+#15 C:\xampp\htdocs\SuiteCRM\include\MVC\SugarApplication.php(110): sugar_cleanup()
+#16 C:\xampp\htdocs\SuiteCRM\index.php(52): SugarApplication->execute()
+#17 {main}
+Tue Feb 19 19:54:34 2019 [20040][1][FATAL] [ERROR] Failed to index bean to index
+Tue Feb 19 19:54:34 2019 [20040][1][FATAL] [ERROR] SuiteCRM\Search\Exceptions\SearchException: Elasticsearch trying to re-indexing a bean but indexer is disabled in configuration. in C:\xampp\htdocs\SuiteCRM\lib\Search\ElasticSearch\ElasticSearchHooks.php:121
+Stack trace:
+#0 C:\xampp\htdocs\SuiteCRM\lib\Search\ElasticSearch\ElasticSearchHooks.php(103): SuiteCRM\Search\ElasticSearch\ElasticSearchHooks->reIndex(Object(UserPreference))
+#1 C:\xampp\htdocs\SuiteCRM\lib\Search\ElasticSearch\ElasticSearchHooks.php(76): SuiteCRM\Search\ElasticSearch\ElasticSearchHooks->reIndexSafe(Object(UserPreference))
+#2 C:\xampp\htdocs\SuiteCRM\include\utils\LogicHook.php(265): SuiteCRM\Search\ElasticSearch\ElasticSearchHooks->beanSaved(Object(UserPreference), 'after_save', '')
+#3 C:\xampp\htdocs\SuiteCRM\include\utils\LogicHook.php(207): LogicHook->process_hooks(Array, 'after_save', '')
+#4 C:\xampp\htdocs\SuiteCRM\data\SugarBean.php(3133): LogicHook->call_custom_logic('UserPreferences', 'after_save', '')
+#5 C:\xampp\htdocs\SuiteCRM\data\SugarBean.php(2447): SugarBean->call_custom_logic('after_save', '')
+#6 C:\xampp\htdocs\SuiteCRM\modules\UserPreferences\UserPreference.php(342): SugarBean->save()
+#7 C:\xampp\htdocs\SuiteCRM\modules\Users\User.php(435): UserPreference->savePreferencesToDB()
+#8 C:\xampp\htdocs\SuiteCRM\include\utils.php(3329): User->savePreferencesToDB()
+#9 C:\xampp\htdocs\SuiteCRM\include\MVC\SugarApplication.php(110): sugar_cleanup()
+#10 C:\xampp\htdocs\SuiteCRM\index.php(52): SugarApplication->execute()
+#11 {main}
+Tue Feb 19 19:54:34 2019 [20040][1][FATAL] [ERROR] Failed to index bean to index
+Tue Feb 19 19:54:34 2019 [20040][1][FATAL] [ERROR] SuiteCRM\Search\Exceptions\SearchException: Elasticsearch trying to re-indexing a bean but indexer is disabled in configuration. in C:\xampp\htdocs\SuiteCRM\lib\Search\ElasticSearch\ElasticSearchHooks.php:121
+Stack trace:
+#0 C:\xampp\htdocs\SuiteCRM\lib\Search\ElasticSearch\ElasticSearchHooks.php(103): SuiteCRM\Search\ElasticSearch\ElasticSearchHooks->reIndex(Object(UserPreference))
+#1 C:\xampp\htdocs\SuiteCRM\lib\Search\ElasticSearch\ElasticSearchHooks.php(76): SuiteCRM\Search\ElasticSearch\ElasticSearchHooks->reIndexSafe(Object(UserPreference))
+#2 C:\xampp\htdocs\SuiteCRM\include\utils\LogicHook.php(265): SuiteCRM\Search\ElasticSearch\ElasticSearchHooks->beanSaved(Object(UserPreference), 'after_save', '')
+#3 C:\xampp\htdocs\SuiteCRM\include\utils\LogicHook.php(207): LogicHook->process_hooks(Array, 'after_save', '')
+#4 C:\xampp\htdocs\SuiteCRM\data\SugarBean.php(3133): LogicHook->call_custom_logic('UserPreferences', 'after_save', '')
+#5 C:\xampp\htdocs\SuiteCRM\data\SugarBean.php(2447): SugarBean->call_custom_logic('after_save', '')
+#6 C:\xampp\htdocs\SuiteCRM\modules\UserPreferences\UserPreference.php(342): SugarBean->save()
+#7 C:\xampp\htdocs\SuiteCRM\modules\Users\User.php(435): UserPreference->savePreferencesToDB()
+#8 C:\xampp\htdocs\SuiteCRM\include\utils.php(3329): User->savePreferencesToDB()
+#9 C:\xampp\htdocs\SuiteCRM\include\MVC\SugarApplication.php(110): sugar_cleanup()
+#10 C:\xampp\htdocs\SuiteCRM\index.php(52): SugarApplication->execute()
+#11 {main}
+Tue Feb 19 19:54:34 2019 [20040][1][FATAL] [ERROR] Failed to index bean to index
+Tue Feb 19 19:54:34 2019 [20040][1][FATAL] [ERROR] SuiteCRM\Search\Exceptions\SearchException: Elasticsearch trying to re-indexing a bean but indexer is disabled in configuration. in C:\xampp\htdocs\SuiteCRM\lib\Search\ElasticSearch\ElasticSearchHooks.php:121
+Stack trace:
+#0 C:\xampp\htdocs\SuiteCRM\lib\Search\ElasticSearch\ElasticSearchHooks.php(103): SuiteCRM\Search\ElasticSearch\ElasticSearchHooks->reIndex(Object(UserPreference))
+#1 C:\xampp\htdocs\SuiteCRM\lib\Search\ElasticSearch\ElasticSearchHooks.php(76): SuiteCRM\Search\ElasticSearch\ElasticSearchHooks->reIndexSafe(Object(UserPreference))
+#2 C:\xampp\htdocs\SuiteCRM\include\utils\LogicHook.php(265): SuiteCRM\Search\ElasticSearch\ElasticSearchHooks->beanSaved(Object(UserPreference), 'after_save', '')
+#3 C:\xampp\htdocs\SuiteCRM\include\utils\LogicHook.php(207): LogicHook->process_hooks(Array, 'after_save', '')
+#4 C:\xampp\htdocs\SuiteCRM\data\SugarBean.php(3133): LogicHook->call_custom_logic('UserPreferences', 'after_save', '')
+#5 C:\xampp\htdocs\SuiteCRM\data\SugarBean.php(2447): SugarBean->call_custom_logic('after_save', '')
+#6 C:\xampp\htdocs\SuiteCRM\modules\UserPreferences\UserPreference.php(342): SugarBean->save()
+#7 C:\xampp\htdocs\SuiteCRM\modules\Users\User.php(435): UserPreference->savePreferencesToDB()
+#8 C:\xampp\htdocs\SuiteCRM\include\utils.php(3329): User->savePreferencesToDB()
+#9 C:\xampp\htdocs\SuiteCRM\include\MVC\SugarApplication.php(110): sugar_cleanup()
+#10 C:\xampp\htdocs\SuiteCRM\index.php(52): SugarApplication->execute()
+#11 {main}
+Tue Feb 19 19:54:34 2019 [20040][1][FATAL] [ERROR] Failed to index bean to index
+Tue Feb 19 19:54:34 2019 [20040][1][FATAL] [ERROR] SuiteCRM\Search\Exceptions\SearchException: Elasticsearch trying to re-indexing a bean but indexer is disabled in configuration. in C:\xampp\htdocs\SuiteCRM\lib\Search\ElasticSearch\ElasticSearchHooks.php:121
+Stack trace:
+#0 C:\xampp\htdocs\SuiteCRM\lib\Search\ElasticSearch\ElasticSearchHooks.php(103): SuiteCRM\Search\ElasticSearch\ElasticSearchHooks->reIndex(Object(UserPreference))
+#1 C:\xampp\htdocs\SuiteCRM\lib\Search\ElasticSearch\ElasticSearchHooks.php(76): SuiteCRM\Search\ElasticSearch\ElasticSearchHooks->reIndexSafe(Object(UserPreference))
+#2 C:\xampp\htdocs\SuiteCRM\include\utils\LogicHook.php(265): SuiteCRM\Search\ElasticSearch\ElasticSearchHooks->beanSaved(Object(UserPreference), 'after_save', '')
+#3 C:\xampp\htdocs\SuiteCRM\include\utils\LogicHook.php(207): LogicHook->process_hooks(Array, 'after_save', '')
+#4 C:\xampp\htdocs\SuiteCRM\data\SugarBean.php(3133): LogicHook->call_custom_logic('UserPreferences', 'after_save', '')
+#5 C:\xampp\htdocs\SuiteCRM\data\SugarBean.php(2447): SugarBean->call_custom_logic('after_save', '')
+#6 C:\xampp\htdocs\SuiteCRM\modules\UserPreferences\UserPreference.php(342): SugarBean->save()
+#7 C:\xampp\htdocs\SuiteCRM\modules\Users\User.php(435): UserPreference->savePreferencesToDB()
+#8 C:\xampp\htdocs\SuiteCRM\include\utils.php(3329): User->savePreferencesToDB()
+#9 C:\xampp\htdocs\SuiteCRM\include\MVC\SugarApplication.php(110): sugar_cleanup()
+#10 C:\xampp\htdocs\SuiteCRM\index.php(52): SugarApplication->execute()
+#11 {main}
+Tue Feb 19 19:54:34 2019 [20040][1][FATAL] [ERROR] Failed to index bean to index
+Tue Feb 19 19:54:34 2019 [20040][1][FATAL] [ERROR] SuiteCRM\Search\Exceptions\SearchException: Elasticsearch trying to re-indexing a bean but indexer is disabled in configuration. in C:\xampp\htdocs\SuiteCRM\lib\Search\ElasticSearch\ElasticSearchHooks.php:121
+Stack trace:
+#0 C:\xampp\htdocs\SuiteCRM\lib\Search\ElasticSearch\ElasticSearchHooks.php(103): SuiteCRM\Search\ElasticSearch\ElasticSearchHooks->reIndex(Object(UserPreference))
+#1 C:\xampp\htdocs\SuiteCRM\lib\Search\ElasticSearch\ElasticSearchHooks.php(76): SuiteCRM\Search\ElasticSearch\ElasticSearchHooks->reIndexSafe(Object(UserPreference))
+#2 C:\xampp\htdocs\SuiteCRM\include\utils\LogicHook.php(265): SuiteCRM\Search\ElasticSearch\ElasticSearchHooks->beanSaved(Object(UserPreference), 'after_save', '')
+#3 C:\xampp\htdocs\SuiteCRM\include\utils\LogicHook.php(207): LogicHook->process_hooks(Array, 'after_save', '')
+#4 C:\xampp\htdocs\SuiteCRM\data\SugarBean.php(3133): LogicHook->call_custom_logic('UserPreferences', 'after_save', '')
+#5 C:\xampp\htdocs\SuiteCRM\data\SugarBean.php(2447): SugarBean->call_custom_logic('after_save', '')
+#6 C:\xampp\htdocs\SuiteCRM\modules\UserPreferences\UserPreference.php(342): SugarBean->save()
+#7 C:\xampp\htdocs\SuiteCRM\modules\Users\User.php(435): UserPreference->savePreferencesToDB()
+#8 C:\xampp\htdocs\SuiteCRM\include\utils.php(3329): User->savePreferencesToDB()
+#9 C:\xampp\htdocs\SuiteCRM\include\MVC\SugarApplication.php(110): sugar_cleanup()
+#10 C:\xampp\htdocs\SuiteCRM\index.php(52): SugarApplication->execute()
+#11 {main}
+Tue Feb 19 19:54:34 2019 [20040][1][FATAL] [ERROR] Failed to index bean to index
+Tue Feb 19 19:54:34 2019 [20040][1][FATAL] [ERROR] SuiteCRM\Search\Exceptions\SearchException: Elasticsearch trying to re-indexing a bean but indexer is disabled in configuration. in C:\xampp\htdocs\SuiteCRM\lib\Search\ElasticSearch\ElasticSearchHooks.php:121
+Stack trace:
+#0 C:\xampp\htdocs\SuiteCRM\lib\Search\ElasticSearch\ElasticSearchHooks.php(103): SuiteCRM\Search\ElasticSearch\ElasticSearchHooks->reIndex(Object(UserPreference))
+#1 C:\xampp\htdocs\SuiteCRM\lib\Search\ElasticSearch\ElasticSearchHooks.php(76): SuiteCRM\Search\ElasticSearch\ElasticSearchHooks->reIndexSafe(Object(UserPreference))
+#2 C:\xampp\htdocs\SuiteCRM\include\utils\LogicHook.php(265): SuiteCRM\Search\ElasticSearch\ElasticSearchHooks->beanSaved(Object(UserPreference), 'after_save', '')
+#3 C:\xampp\htdocs\SuiteCRM\include\utils\LogicHook.php(207): LogicHook->process_hooks(Array, 'after_save', '')
+#4 C:\xampp\htdocs\SuiteCRM\data\SugarBean.php(3133): LogicHook->call_custom_logic('UserPreferences', 'after_save', '')
+#5 C:\xampp\htdocs\SuiteCRM\data\SugarBean.php(2447): SugarBean->call_custom_logic('after_save', '')
+#6 C:\xampp\htdocs\SuiteCRM\modules\UserPreferences\UserPreference.php(342): SugarBean->save()
+#7 C:\xampp\htdocs\SuiteCRM\modules\Users\User.php(435): UserPreference->savePreferencesToDB()
+#8 C:\xampp\htdocs\SuiteCRM\include\utils.php(3329): User->savePreferencesToDB()
+#9 C:\xampp\htdocs\SuiteCRM\include\MVC\SugarApplication.php(110): sugar_cleanup()
+#10 C:\xampp\htdocs\SuiteCRM\index.php(52): SugarApplication->execute()
+#11 {main}
+Tue Feb 19 19:54:34 2019 [20040][1][FATAL] [ERROR] Failed to index bean to index
+Tue Feb 19 19:54:34 2019 [20040][1][FATAL] [ERROR] SuiteCRM\Search\Exceptions\SearchException: Elasticsearch trying to re-indexing a bean but indexer is disabled in configuration. in C:\xampp\htdocs\SuiteCRM\lib\Search\ElasticSearch\ElasticSearchHooks.php:121
+Stack trace:
+#0 C:\xampp\htdocs\SuiteCRM\lib\Search\ElasticSearch\ElasticSearchHooks.php(103): SuiteCRM\Search\ElasticSearch\ElasticSearchHooks->reIndex(Object(UserPreference))
+#1 C:\xampp\htdocs\SuiteCRM\lib\Search\ElasticSearch\ElasticSearchHooks.php(76): SuiteCRM\Search\ElasticSearch\ElasticSearchHooks->reIndexSafe(Object(UserPreference))
+#2 C:\xampp\htdocs\SuiteCRM\include\utils\LogicHook.php(265): SuiteCRM\Search\ElasticSearch\ElasticSearchHooks->beanSaved(Object(UserPreference), 'after_save', '')
+#3 C:\xampp\htdocs\SuiteCRM\include\utils\LogicHook.php(207): LogicHook->process_hooks(Array, 'after_save', '')
+#4 C:\xampp\htdocs\SuiteCRM\data\SugarBean.php(3133): LogicHook->call_custom_logic('UserPreferences', 'after_save', '')
+#5 C:\xampp\htdocs\SuiteCRM\data\SugarBean.php(2447): SugarBean->call_custom_logic('after_save', '')
+#6 C:\xampp\htdocs\SuiteCRM\modules\UserPreferences\UserPreference.php(342): SugarBean->save()
+#7 C:\xampp\htdocs\SuiteCRM\modules\Users\User.php(435): UserPreference->savePreferencesToDB()
+#8 C:\xampp\htdocs\SuiteCRM\include\utils.php(3329): User->savePreferencesToDB()
+#9 C:\xampp\htdocs\SuiteCRM\include\MVC\SugarApplication.php(110): sugar_cleanup()
+#10 C:\xampp\htdocs\SuiteCRM\index.php(52): SugarApplication->execute()
+#11 {main}
+Tue Feb 19 19:54:34 2019 [20040][1][FATAL] [ERROR] Failed to index bean to index
+Tue Feb 19 19:54:34 2019 [20040][1][FATAL] [ERROR] SuiteCRM\Search\Exceptions\SearchException: Elasticsearch trying to re-indexing a bean but indexer is disabled in configuration. in C:\xampp\htdocs\SuiteCRM\lib\Search\ElasticSearch\ElasticSearchHooks.php:121
+Stack trace:
+#0 C:\xampp\htdocs\SuiteCRM\lib\Search\ElasticSearch\ElasticSearchHooks.php(103): SuiteCRM\Search\ElasticSearch\ElasticSearchHooks->reIndex(Object(UserPreference))
+#1 C:\xampp\htdocs\SuiteCRM\lib\Search\ElasticSearch\ElasticSearchHooks.php(76): SuiteCRM\Search\ElasticSearch\ElasticSearchHooks->reIndexSafe(Object(UserPreference))
+#2 C:\xampp\htdocs\SuiteCRM\include\utils\LogicHook.php(265): SuiteCRM\Search\ElasticSearch\ElasticSearchHooks->beanSaved(Object(UserPreference), 'after_save', '')
+#3 C:\xampp\htdocs\SuiteCRM\include\utils\LogicHook.php(207): LogicHook->process_hooks(Array, 'after_save', '')
+#4 C:\xampp\htdocs\SuiteCRM\data\SugarBean.php(3133): LogicHook->call_custom_logic('UserPreferences', 'after_save', '')
+#5 C:\xampp\htdocs\SuiteCRM\data\SugarBean.php(2447): SugarBean->call_custom_logic('after_save', '')
+#6 C:\xampp\htdocs\SuiteCRM\modules\UserPreferences\UserPreference.php(342): SugarBean->save()
+#7 C:\xampp\htdocs\SuiteCRM\modules\Users\User.php(435): UserPreference->savePreferencesToDB()
+#8 C:\xampp\htdocs\SuiteCRM\include\utils.php(3329): User->savePreferencesToDB()
+#9 C:\xampp\htdocs\SuiteCRM\include\MVC\SugarApplication.php(110): sugar_cleanup()
+#10 C:\xampp\htdocs\SuiteCRM\index.php(52): SugarApplication->execute()
+#11 {main}
+Tue Feb 19 19:54:36 2019 [20040][1][FATAL] [ERROR] Failed to index bean to index
+Tue Feb 19 19:54:36 2019 [20040][1][FATAL] [ERROR] SuiteCRM\Search\Exceptions\SearchException: Elasticsearch trying to re-indexing a bean but indexer is disabled in configuration. in C:\xampp\htdocs\SuiteCRM\lib\Search\ElasticSearch\ElasticSearchHooks.php:121
+Stack trace:
+#0 C:\xampp\htdocs\SuiteCRM\lib\Search\ElasticSearch\ElasticSearchHooks.php(103): SuiteCRM\Search\ElasticSearch\ElasticSearchHooks->reIndex(Object(UserPreference))
+#1 C:\xampp\htdocs\SuiteCRM\lib\Search\ElasticSearch\ElasticSearchHooks.php(76): SuiteCRM\Search\ElasticSearch\ElasticSearchHooks->reIndexSafe(Object(UserPreference))
+#2 C:\xampp\htdocs\SuiteCRM\include\utils\LogicHook.php(265): SuiteCRM\Search\ElasticSearch\ElasticSearchHooks->beanSaved(Object(UserPreference), 'after_save', '')
+#3 C:\xampp\htdocs\SuiteCRM\include\utils\LogicHook.php(207): LogicHook->process_hooks(Array, 'after_save', '')
+#4 C:\xampp\htdocs\SuiteCRM\data\SugarBean.php(3133): LogicHook->call_custom_logic('UserPreferences', 'after_save', '')
+#5 C:\xampp\htdocs\SuiteCRM\data\SugarBean.php(2447): SugarBean->call_custom_logic('after_save', '')
+#6 C:\xampp\htdocs\SuiteCRM\modules\UserPreferences\UserPreference.php(342): SugarBean->save()
+#7 C:\xampp\htdocs\SuiteCRM\modules\Users\User.php(435): UserPreference->savePreferencesToDB()
+#8 C:\xampp\htdocs\SuiteCRM\include\utils.php(3329): User->savePreferencesToDB()
+#9 C:\xampp\htdocs\SuiteCRM\include\MVC\SugarApplication.php(110): sugar_cleanup()
+#10 C:\xampp\htdocs\SuiteCRM\index.php(52): SugarApplication->execute()
+#11 {main}
+Tue Feb 19 23:06:49 2019 [20040][1][FATAL] [ERROR] Failed to index bean to index
+Tue Feb 19 23:06:49 2019 [20040][1][FATAL] [ERROR] SuiteCRM\Search\Exceptions\SearchException: Elasticsearch trying to re-indexing a bean but indexer is disabled in configuration. in C:\xampp\htdocs\SuiteCRM\lib\Search\ElasticSearch\ElasticSearchHooks.php:121
+Stack trace:
+#0 C:\xampp\htdocs\SuiteCRM\lib\Search\ElasticSearch\ElasticSearchHooks.php(103): SuiteCRM\Search\ElasticSearch\ElasticSearchHooks->reIndex(Object(UserPreference))
+#1 C:\xampp\htdocs\SuiteCRM\lib\Search\ElasticSearch\ElasticSearchHooks.php(76): SuiteCRM\Search\ElasticSearch\ElasticSearchHooks->reIndexSafe(Object(UserPreference))
+#2 C:\xampp\htdocs\SuiteCRM\include\utils\LogicHook.php(265): SuiteCRM\Search\ElasticSearch\ElasticSearchHooks->beanSaved(Object(UserPreference), 'after_save', '')
+#3 C:\xampp\htdocs\SuiteCRM\include\utils\LogicHook.php(207): LogicHook->process_hooks(Array, 'after_save', '')
+#4 C:\xampp\htdocs\SuiteCRM\data\SugarBean.php(3133): LogicHook->call_custom_logic('UserPreferences', 'after_save', '')
+#5 C:\xampp\htdocs\SuiteCRM\data\SugarBean.php(2447): SugarBean->call_custom_logic('after_save', '')
+#6 C:\xampp\htdocs\SuiteCRM\modules\UserPreferences\UserPreference.php(342): SugarBean->save()
+#7 C:\xampp\htdocs\SuiteCRM\modules\Users\User.php(435): UserPreference->savePreferencesToDB()
+#8 C:\xampp\htdocs\SuiteCRM\include\utils.php(3329): User->savePreferencesToDB()
+#9 C:\xampp\htdocs\SuiteCRM\include\MVC\SugarApplication.php(110): sugar_cleanup()
+#10 C:\xampp\htdocs\SuiteCRM\index.php(52): SugarApplication->execute()
+#11 {main}
+Tue Feb 19 23:06:49 2019 [20040][1][FATAL] [ERROR] Failed to index bean to index
+Tue Feb 19 23:06:49 2019 [20040][1][FATAL] [ERROR] SuiteCRM\Search\Exceptions\SearchException: Elasticsearch trying to re-indexing a bean but indexer is disabled in configuration. in C:\xampp\htdocs\SuiteCRM\lib\Search\ElasticSearch\ElasticSearchHooks.php:121
+Stack trace:
+#0 C:\xampp\htdocs\SuiteCRM\lib\Search\ElasticSearch\ElasticSearchHooks.php(103): SuiteCRM\Search\ElasticSearch\ElasticSearchHooks->reIndex(Object(UserPreference))
+#1 C:\xampp\htdocs\SuiteCRM\lib\Search\ElasticSearch\ElasticSearchHooks.php(76): SuiteCRM\Search\ElasticSearch\ElasticSearchHooks->reIndexSafe(Object(UserPreference))
+#2 C:\xampp\htdocs\SuiteCRM\include\utils\LogicHook.php(265): SuiteCRM\Search\ElasticSearch\ElasticSearchHooks->beanSaved(Object(UserPreference), 'after_save', '')
+#3 C:\xampp\htdocs\SuiteCRM\include\utils\LogicHook.php(207): LogicHook->process_hooks(Array, 'after_save', '')
+#4 C:\xampp\htdocs\SuiteCRM\data\SugarBean.php(3133): LogicHook->call_custom_logic('UserPreferences', 'after_save', '')
+#5 C:\xampp\htdocs\SuiteCRM\data\SugarBean.php(2447): SugarBean->call_custom_logic('after_save', '')
+#6 C:\xampp\htdocs\SuiteCRM\modules\UserPreferences\UserPreference.php(342): SugarBean->save()
+#7 C:\xampp\htdocs\SuiteCRM\modules\Users\User.php(435): UserPreference->savePreferencesToDB()
+#8 C:\xampp\htdocs\SuiteCRM\include\utils.php(3329): User->savePreferencesToDB()
+#9 C:\xampp\htdocs\SuiteCRM\include\MVC\SugarApplication.php(110): sugar_cleanup()
+#10 C:\xampp\htdocs\SuiteCRM\index.php(52): SugarApplication->execute()
+#11 {main}
+Tue Feb 19 23:29:11 2019 [20040][1][FATAL] [ERROR] Failed to index bean to index
+Tue Feb 19 23:29:11 2019 [20040][1][FATAL] [ERROR] SuiteCRM\Search\Exceptions\SearchException: Elasticsearch trying to re-indexing a bean but indexer is disabled in configuration. in C:\xampp\htdocs\SuiteCRM\lib\Search\ElasticSearch\ElasticSearchHooks.php:121
+Stack trace:
+#0 C:\xampp\htdocs\SuiteCRM\lib\Search\ElasticSearch\ElasticSearchHooks.php(103): SuiteCRM\Search\ElasticSearch\ElasticSearchHooks->reIndex(Object(UserPreference))
+#1 C:\xampp\htdocs\SuiteCRM\lib\Search\ElasticSearch\ElasticSearchHooks.php(76): SuiteCRM\Search\ElasticSearch\ElasticSearchHooks->reIndexSafe(Object(UserPreference))
+#2 C:\xampp\htdocs\SuiteCRM\include\utils\LogicHook.php(265): SuiteCRM\Search\ElasticSearch\ElasticSearchHooks->beanSaved(Object(UserPreference), 'after_save', '')
+#3 C:\xampp\htdocs\SuiteCRM\include\utils\LogicHook.php(207): LogicHook->process_hooks(Array, 'after_save', '')
+#4 C:\xampp\htdocs\SuiteCRM\data\SugarBean.php(3133): LogicHook->call_custom_logic('UserPreferences', 'after_save', '')
+#5 C:\xampp\htdocs\SuiteCRM\data\SugarBean.php(2447): SugarBean->call_custom_logic('after_save', '')
+#6 C:\xampp\htdocs\SuiteCRM\modules\UserPreferences\UserPreference.php(342): SugarBean->save()
+#7 C:\xampp\htdocs\SuiteCRM\modules\Users\User.php(435): UserPreference->savePreferencesToDB()
+#8 C:\xampp\htdocs\SuiteCRM\include\utils.php(3329): User->savePreferencesToDB()
+#9 C:\xampp\htdocs\SuiteCRM\include\MVC\SugarApplication.php(110): sugar_cleanup()
+#10 C:\xampp\htdocs\SuiteCRM\index.php(52): SugarApplication->execute()
+#11 {main}

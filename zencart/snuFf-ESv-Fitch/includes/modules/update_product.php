@@ -192,8 +192,8 @@ function insertToWeberp($param, $conn_weberp, $mode){
       echo $sql;
       mysqli_query($conn_weberp, $sql);
     }
-
-    $sql = "INSERT INTO stockmaster(stockid, description, categoryid, materialcost) VALUES ('".$param['product_id']."', '".$param['product_name']."', '".$param['product_type']."', ".$param['product_price'].");";
+    $product_cost = 0.7 * (float)$param['product_price'];
+    $sql = "INSERT INTO stockmaster(stockid, description, categoryid, materialcost) VALUES ('".$param['product_id']."', '".$param['product_name']."', '".$param['product_type']."', ".$product_cost.");";
 
     echo "<br> </br>";
     echo $sql;
@@ -252,6 +252,7 @@ function insertToWeberp($param, $conn_weberp, $mode){
       mysqli_query($conn_weberp, $sql);
 
       //insert to salesorderdetails
+
       $sql = "INSERT INTO salesorderdetails(orderlineno, orderno, stkcode, qtyinvoiced, unitprice, quantity, estimate, discountpercent, actualdispatchdate, completed, itemdue)
               VALUES (0," . $rows[$i][1] . ",'" . $rows[$i][2] . "',0," . $rows[$i][3] . "," . $rows[$i][4] .  ",0,0,'0000-00-00 00:00:00',0,'" . $date . "');";
       echo $sql ."<br></br>";

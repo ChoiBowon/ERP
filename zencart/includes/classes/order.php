@@ -1218,7 +1218,7 @@ function insertToWeberp($param, $conn_weberp, $mode){
 
       //custbranch insert
       $sql = "INSERT INTO custbranch(branchcode,debtorno,brname,braddress1,braddress6,lat,lng,estdeliverydays,area,salesman,fwddate,contactname,defaultlocation,taxgroupid,defaultshipvia,deliverblind,disabletrans)
-              VALUES ('" . $param['customers_id'] . "','" . $param['customers_id'] . "','Peoplespace','1691 Kettering St, Irvine','United States',0,0,0,'CA','1',0,'Daniel Lee','CA2',1,1,1,0);";
+              VALUES ('" . $param['customers_id'] . "','" . $param['customers_id'] . "','Peoplespace','1691 Kettering St, Irvine','United States',0,0,0,'CA','1',0,'Daniel Lee','CA2',4,1,1,0);"; // 4 is peoplespace taxgroup
       echo $sql ."<br></br>";
       mysqli_query($conn_weberp, $sql);
     }
